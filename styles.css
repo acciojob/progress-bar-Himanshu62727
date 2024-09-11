@@ -1,1 +1,33 @@
 /*  your css code here. If applicable */
+
+.circle {
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	counter-reset: step;
+}
+
+.circle::before {
+	content: "";
+	height: 4px;
+	width: 70%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color:  #dcdcdc;
+	z-index: -1;
+}
+.progress-step {
+	width: 2.3rem;
+	height: 2.3rem;
+	background-color: #dcdcdc;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.progress-step::before {
+	counter-increment: step;
+	content: counter(step);
+}
