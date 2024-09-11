@@ -6,19 +6,70 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 
+	<style>
+		.progress-bar{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cirlce{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #c2c6c9; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 10px; */
+    font-size: 16px; 
+    color: black;
+    background: #fff;
+}
+
+.active{
+    border-color: #1e86d0;
+    /* background-color: #1e86d0; */
+    color: black;
+}
+
+.line{
+    height: 2px;
+    flex: 1;
+    background: #c2c6c9;
+}
+
+.line.active{
+    background: #1e86d0;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 0 10px;
+	position: relative;
+	top: 30px;
+	left: 190px;
+}
+	</style>
+
 <body>
 	<!-- the entire body must be written by student -->
 
-<div class="circle">
-	<div class="progress-step"></div>
-	<div class="progress-step"></div>
-	<div class="progress-step"></div>
-	<div class="progress-step"></div>
-	<div class="progress-step"></div>
-</div>
-<br><br>
-	<button><div id="prev">Prev</div></button>
-		<button><div id="next">Next</div></button>
+<div class="progress-bar">
+          <div class="cirlce circle active" id="circle-1">1</div>
+          <div class="line"></div>
+          <div class="cirlce circle" id="circle-2">2</div>
+          <div class="line"></div>
+          <div class="cirlce circle" id="circle-3">3</div>
+          <div class="line"></div>
+          <div class="cirlce circle" id="circle-4">4</div>
+          <div class="line"></div>
+          <div class="cirlce circle" id="circle-5">5</div>
+     </div>
+     <button id="prev" disabled> Prev </button>
+     <button id="next"> Next </button>
+
     <script type="text/javascript" src="./script.js">
 </script>
 </body>
